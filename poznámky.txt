@@ -1,0 +1,108 @@
+project okno - alt+1
+run - shift+F10
+Debug - shift+F9
+alt+enter - kontext. menu s možností přidat výjimku
+alt+enter na jménu třídy = otevře menu s možností přidat test
+ctrl+q - dokumentace příkazu
+ctrl+space - nabídne
+ctrl+alt+l - zformátovat text kodu
+proměnné platí vždy jen v daném bloku!
+shift+F6 = přejmenuje všechny stejné související
+alt+insert v edit. okně = umožňuje měnit metodu
+
+
+Třída:
+void - funkce nic nevrací
+boolean - funkce něco vrací
+Main - třída
+System - třída komunikující s okolním systémem
+
+
+out - objekt reprezentující výpis do konzole
+in - objekt umožňující načíst něco z konzoly
+scanner - objekt shrnující data z kozzoly
+
+println() - metoda printline - pošle to, co napíšu do závorky ven
+read() - metoda, která říká: "čekej, dokud uživatel nestiskne enter, sežere první znak, co tam uživatel napíše"
+new - operátor - vytváří objekty
+                -před new se popíše proměnná (např. Scanner načítej = ) a pak následuje operátor (new)
+contains - ověřuje jestli obsahuje
+
+equals() - funkce
+
+while() - sintax "dokud"
+if(){} - sintax
+else {} - sintax - stane se, když neplatí nic z toho, co bylo před ní
+void - nic nevrací (prázdnota)
+
+
+11.1.2016 dnešní cvičení:
+
+package com.company;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) throws IOException {
+	System.out.println("napiš cokoli"); // třída System pošle do konzoly text
+        Scanner načítej = new Scanner(System.in); // vytvoří nový objekt Scanner pojmenovaný "načítej"
+                while(načítej.hasNextLine()) { // dokud
+                    String příkaz = načítej.nextLine(); // řetězec "příkaz"
+                    if(příkaz.equals("píšu")) {
+                        System.out.println("borec");
+                    }// write your code here
+                    if(příkaz.equals("cokoli")) {
+                        System.out.println("Ty jsi ale papoušek?");
+                    }// write your code here
+                }
+    }
+}
+
+lekce 2
+
+vytvoření class - (class začínají velkým písmenem)
+v projekt okně pravým
+clas = šablona
+každá class má mít svůj konstruktor - public ("parametry"){"tělo matody"}
+konstruktor je speciální typ metody
+ArrayList - standardní třída - přidává a odebírá objekty
+
+funkce
+modifikátor přístupu + typ (classa) + jméno
+
+lekce 3
+
+forciklus -
+iterace - vlastnost metody, veme každou věc v seznamu a něco s ní udělá
+
+pole - atipický objekt - definuje se Jméno_objektu [] jmeno_metody - např. String [] rozdělení
+
+lekce 4
+mapa - lokace - základem bude třída
+akce bude další třída - ve třídě akce budou příkazy a argumenty -> bude potřeba konstruktor se dvěma prametry
+
+typ proměnné Integer (zkráceně int) - reprezentuje číslo
+this = ukazatel na konkrétní objekt, musí se použít, jmenuje-li se objekt stejně, jako šablona
+
+return = příkaz vrací něco z metody
+false = hodnota nepravda
+true - hodnota nepravda
+length = vlastnost pole délka (počet parametrů)
+== porovnává
+
+testovací framework = junit
+assertEquals = funkce která ověřuje rovnosti funkcí s volitelným parametrem co vypíše v případě neúspěchu
+
+lekce 5
+int = definuju číslo
+equals =
+super = ukazatel na předka, t.j. původní, nezměněná funkce
+instanceof = operátor zjišřuje classu objektu
+! = oprátor negace - musí být na boolean (true/falce)
+gettr = metoda
+obj = instance, objekt, porovnávající objekty?
+Object = třída
+&& = operátor "a"
+|| = operáto or / nebo
