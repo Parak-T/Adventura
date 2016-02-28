@@ -106,3 +106,17 @@ obj = instance, objekt, porovnávající objekty?
 Object = třída
 && = operátor "a"
 || = operáto or / nebo
+
+lekce
+modifikátory přístupu - access modifier
+public: veřejný, může je používat kdokoli
+private: používá se na property (proměnná na třídě) jen v dané třídě
+protected: (chráněný) může být použito jen potomkem a v daném balíčku
+nic nenapsáno: jen v daném balíčku (př. com.company)
+
+vytvoření potomka:
+vytvoříme novou classu, za její jméno napíšeme extends a za to jméno předka
+->zdědí všechny neprivátní metody předka a konstruktory
+ proto musíme zavolat konstruktor předka
+
+ super - odkaz na přdka

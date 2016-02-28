@@ -27,4 +27,7 @@ public class Akce {
 
     }
 
+    public void proved(String[] parametry){
+
+    }
 }
