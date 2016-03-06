@@ -13,7 +13,7 @@ alt+insert v edit. okně = umožňuje měnit metodu
 
 Třída:
 void - funkce nic nevrací
-boolean - funkce něco vrací
+boolean - funkce něco vrací (pravda/lež)
 Main - třída
 System - třída komunikující s okolním systémem
 
@@ -97,7 +97,7 @@ assertEquals = funkce která ověřuje rovnosti funkcí s volitelným parametrem
 
 lekce 5
 int = definuju číslo
-equals =
+equals = metoda porovnávájící dvou objektů
 super = ukazatel na předka, t.j. původní, nezměněná funkce
 instanceof = operátor zjišřuje classu objektu
 ! = oprátor negace - musí být na boolean (true/falce)
@@ -107,7 +107,7 @@ Object = třída
 && = operátor "a"
 || = operáto or / nebo
 
-lekce
+lekce 6
 modifikátory přístupu - access modifier
 public: veřejný, může je používat kdokoli
 private: používá se na property (proměnná na třídě) jen v dané třídě
@@ -120,3 +120,5 @@ vytvoříme novou classu, za její jméno napíšeme extends a za to jméno pře
  proto musíme zavolat konstruktor předka
 
  super - odkaz na přdka
+ contains - metoda porovnávající zadání s listem (polem, vrací treu/false)
+ indexOf - metoda vyhledá na listu zadanou věc a vrátí souřadnice

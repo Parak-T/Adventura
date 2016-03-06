@@ -6,23 +6,40 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        Inventar truhla = new Inventar();
-        truhla.přidat("vidlička");
-        truhla.přidat("nůž");
-        truhla.přidat("lžíce");
+        Mapa mapa = new Mapa();
+        Jdi jdi = new Jdi(mapa);
+
+        Scanner načítej = new Scanner(System.in);
+        while (načítej.hasNextLine()) {
+            String příkaz = načítej.nextLine();
+            String[] rozdělení = příkaz.split(" ");
+            if (jdi.rozumimPrikazu(rozdělení)) {
+                jdi.proved(rozdělení);
+            }
+
+        }
+
+    }
+
+    /*public static void main(String[] args) throws IOException {
+       Inventar truhla = new Inventar();
+       truhla.přidat("vidlička");
+       truhla.přidat("nůž");
+       truhla.přidat("lžíce");
         truhla.přidat("veverka");
 
-        truhla.vypiš();
+       truhla.vypiš();
 
-        truhla.odeber("nůž");
+       truhla.odeber("nůž");
 
-        truhla.vypiš();
+       truhla.vypiš();
 
         truhla.přidat("sekera");
 
         truhla.vypiš();
 
         System.out.println("napiš cokoli"); // třída System pošle do konzoly text
+
         Scanner načítej = new Scanner(System.in); // vytvoří nový objekt Scanner pojmenovaný "načítej"
         while (načítej.hasNextLine()) { // dokud
             String příkaz = načítej.nextLine(); // řetězec "příkaz"
@@ -40,12 +57,24 @@ public class Main {
                 if (truhla.ověř(rozdělení[1])) {
                     truhla.odeber(rozdělení[1]);
                     truhla.přidat("mrtvá veverka");
-                }
-                else {
+                } else {
                     System.out.println("chyť si veverku");
                 }
             }
         }
     }
+
+    //public static void pozice(String[] pos ) throws IOException {
+    //Mapa pozice = new Mapa();
+
+    //Scanner pozice = new Scanner(System.in);
+
+    //String jdi = Pozice.nextLine();
+    //if (jdi.equals("Kampak?")) {
+    //pozice.napiš();
+    //}
+    //}
+*/
 }
 
+//ukol vytvoř clasu s novým příkazem

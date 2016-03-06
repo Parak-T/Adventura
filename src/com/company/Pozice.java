@@ -23,7 +23,7 @@ public class Pozice {
           return true;
         }
         else {
-            return false
+            return false;
         }
     }
 
@@ -33,6 +33,11 @@ public class Pozice {
 
     public int getY() {
         return y;
+    }
+
+    @Override
+    public String toString() {
+        return getX()+","+getY();
     }
 }
 // úkol napsat možnost posunu východ, západ, sever, jih
