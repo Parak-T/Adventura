@@ -1,7 +1,10 @@
 package com.company;
 
+import com.company.akce.Jdi;
+
 import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by TIBOR on 14.2.2016.
@@ -9,34 +12,37 @@ import java.util.Scanner;
 public class Mapa {
     public Pozice aktualniPozice;
 
-    public Mapa() {
-        povoleneLokace = new ArrayList();
+    public Map povoleneLokace;
 
-        povoleneLokace.add(new Pozice(0, 1));
-        povoleneLokace.add(new Pozice(1, 1));
-        povoleneLokace.add(new Pozice(2, 1));
-        povoleneLokace.add(new Pozice(0, 1));
-        povoleneLokace.add(new Pozice(1, 2));
+    public Mapa() {
+
+
+        povoleneLokace = new HashMap<>();
+        ArrayList jdi = new ArrayList();
+        jdi.add (new Jdi(this));
+
+        povoleneLokace.put(new Pozice(0, 1), new Lokace (jdi));
+        povoleneLokace.put(new Pozice(1, 1), new Lokace (jdi));
+        povoleneLokace.put(new Pozice(2, 1), new Lokace (jdi));
+        povoleneLokace.put(new Pozice(0, 1), new Lokace (jdi));
+        povoleneLokace.put(new Pozice(1, 2), new Lokace (jdi));
 
         aktualniPozice = (new Pozice(1, 1));
     }
 
-    public ArrayList povoleneLokace;
-
-
     public boolean muzuJit(String smer) {
         if (smer.equals("sever")) {
             Pozice nova = new Pozice(aktualniPozice.getX(), aktualniPozice.getY() + 1);
-            return povoleneLokace.contains(nova);
+            return povoleneLokace.containsKey(nova);
         } else if (smer.equals("jih")) {
             Pozice nova = new Pozice(aktualniPozice.getX(), aktualniPozice.getY() - 1);
-            return povoleneLokace.contains(nova);
+            return povoleneLokace.containsKey(nova);
         } else if (smer.equals("vychod")) {
             Pozice nova = new Pozice(aktualniPozice.getX() + 1, aktualniPozice.getY());
-            return povoleneLokace.contains(nova);
+            return povoleneLokace.containsKey(nova);
         } else if (smer.equals("zapad")) {
             Pozice nova = new Pozice(aktualniPozice.getX() - 1, aktualniPozice.getY());
-            return povoleneLokace.contains(nova);
+            return povoleneLokace.containsKey(nova);
         } else {
             return false;
         }

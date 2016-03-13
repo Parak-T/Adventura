@@ -1,4 +1,8 @@
-package com.company;
+package com.company.akce;
+
+import com.company.Mapa;
+import com.company.Pozice;
+import com.company.akce.Akce;
 
 /**
  * Created by TIBOR on 28. 2. 2016.

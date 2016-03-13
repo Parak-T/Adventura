@@ -9,6 +9,7 @@ ctrl+alt+l - zformátovat text kodu
 proměnné platí vždy jen v daném bloku!
 shift+F6 = přejmenuje všechny stejné související
 alt+insert v edit. okně = umožňuje měnit metodu
+ctrl+shift+šipka - posune celý řádek
 
 
 Třída:
@@ -69,6 +70,7 @@ každá class má mít svůj konstruktor - public ("parametry"){"tělo matody"}
 konstruktor je speciální typ metody
 ArrayList - standardní třída - přidává a odebírá objekty
 
+
 funkce
 modifikátor přístupu + typ (classa) + jméno
 
@@ -122,3 +124,9 @@ vytvoříme novou classu, za její jméno napíšeme extends a za to jméno pře
  super - odkaz na přdka
  contains - metoda porovnávající zadání s listem (polem, vrací treu/false)
  indexOf - metoda vyhledá na listu zadanou věc a vrátí souřadnice
+
+ lekce 7
+ interface - jedna třída může použít více interface, narozdíl od dědičnosti, kdy lze použít jen jednu.
+ List - interface, definuje seznamy
+ Map - interface, funguje jako klíč + hodnota
+ Set - interface, funguje podobně jako list, ale nedrží pořadí a nemůže mít dvakrát to samé.

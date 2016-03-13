@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.akce.Jdi;
+
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -77,4 +79,4 @@ public class Main {
 */
 }
 
-//ukol vytvoř clasu s novým příkazem
+//ukol vytvoř clasu s novým příkazem (třeba seber)

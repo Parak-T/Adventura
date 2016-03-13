@@ -16,6 +16,7 @@ public class Pozice {
     public boolean equals(Object obj) {//metoda
 
         if (!(obj instanceof Pozice)) {
+            return false;
         }
 
         Pozice poz = (Pozice) obj; //proměnná v metodě
