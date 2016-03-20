@@ -1,6 +1,7 @@
 package com.company;
 
 import com.company.akce.Jdi;
+import com.company.akce.Zvedni;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,20 +13,30 @@ import java.util.Map;
 public class Mapa {
     public Pozice aktualniPozice;
 
-    public Map povoleneLokace;
+    public Map<Pozice, Lokace> povoleneLokace;
 
-    public Mapa() {
+    public Mapa(Inventar inventar) {
 
+        Jdi prikazJdi = new Jdi(this);
+        Zvedni prikazZvedni = new Zvedni(this, inventar);
+
+        ArrayList jdi = new ArrayList();
+        jdi.add(prikazJdi.getPrikaz());
+
+        ArrayList jdiZvedni = new ArrayList();
+        jdiZvedni.add(prikazJdi.getPrikaz());
+        jdiZvedni.add(prikazZvedni.getPrikaz());
+
+        ArrayList predmety = new ArrayList();
+        predmety.add("kámen");
+        predmety.add("nůž");
 
         povoleneLokace = new HashMap<>();
-        ArrayList jdi = new ArrayList();
-        jdi.add (new Jdi(this));
-
-        povoleneLokace.put(new Pozice(0, 1), new Lokace (jdi));
-        povoleneLokace.put(new Pozice(1, 1), new Lokace (jdi));
-        povoleneLokace.put(new Pozice(2, 1), new Lokace (jdi));
-        povoleneLokace.put(new Pozice(0, 1), new Lokace (jdi));
-        povoleneLokace.put(new Pozice(1, 2), new Lokace (jdi));
+        povoleneLokace.put(new Pozice(0, 1), new Lokace(jdi));
+        povoleneLokace.put(new Pozice(1, 1), new Lokace(jdiZvedni, predmety));
+        povoleneLokace.put(new Pozice(2, 1), new Lokace(jdi));
+        povoleneLokace.put(new Pozice(0, 1), new Lokace(jdi));
+        povoleneLokace.put(new Pozice(1, 2), new Lokace(jdi));
 
         aktualniPozice = (new Pozice(1, 1));
     }
@@ -64,6 +75,11 @@ public class Mapa {
         } else {
             return aktualniPozice;
         }
+    }
+
+    public Lokace getAktualniLokace() {
+        return povoleneLokace.get(aktualniPozice);
+
     }
 
 }

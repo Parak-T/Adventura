@@ -12,11 +12,11 @@ public class Inventar {
 
     public ArrayList predmety;
 
-    public void přidat(String vec) {
+    public void pridat(String vec) {
         predmety.add(vec);
     }
 
-    public void vypiš() {
+    public void vypis() {
         for (Object vec : predmety) {
             System.out.println(vec);
         }

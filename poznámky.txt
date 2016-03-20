@@ -2,6 +2,7 @@ project okno - alt+1
 run - shift+F10
 Debug - shift+F9
 alt+enter - kontext. menu s možností přidat výjimku
+alt+enter - konext. menu s možností inportu Classy
 alt+enter na jménu třídy = otevře menu s možností přidat test
 ctrl+q - dokumentace příkazu
 ctrl+space - nabídne
@@ -130,3 +131,7 @@ vytvoříme novou classu, za její jméno napíšeme extends a za to jméno pře
  List - interface, definuje seznamy
  Map - interface, funguje jako klíč + hodnota
  Set - interface, funguje podobně jako list, ale nedrží pořadí a nemůže mít dvakrát to samé.
+
+lekce 8
+generika (koncept generic)- soubor omezení pro Classu
+                           -za název Classy napíšu bez mezery <> do nich píšeme omezení

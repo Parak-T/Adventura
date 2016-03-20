@@ -28,6 +28,13 @@ public class Pozice {
         }
     }
 
+    @Override
+    public int hashCode() {
+        int result = x;
+        result = 31 * result + y;
+        return result;
+    }
+
     public int getX() {
         return x;
     }
@@ -41,4 +48,3 @@ public class Pozice {
         return getX()+","+getY();
     }
 }
-// úkol napsat možnost posunu východ, západ, sever, jih
