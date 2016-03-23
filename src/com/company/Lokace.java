@@ -31,7 +31,12 @@ public class Lokace {
     public boolean muzuVzit(String predmet) {
         return predmety.contains(predmet);
     }
-public void odeberPredmet (String predmet){
-    predmety.remove (predmet);
-}
+
+    public void odeberPredmet(String predmet) {
+        predmety.remove(predmet);
+    }
+
+    public void pridejPredmet(String predmet) {
+        predmety.add(predmet);
+    }
 }

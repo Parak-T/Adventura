@@ -26,8 +26,9 @@ public class Inventar {
         predmety.remove(vec);
     }
 
-    public boolean ověř (String vec){
+    public boolean over(String vec){
         return predmety.contains(vec);
     }
+
 }
 

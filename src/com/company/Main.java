@@ -1,6 +1,7 @@
 package com.company;
 
 import com.company.akce.Jdi;
+import com.company.akce.Poloz;
 import com.company.akce.Zvedni;
 
 import java.io.IOException;
@@ -12,7 +13,8 @@ public class Main {
         Inventar inventar = new Inventar();
         Mapa mapa = new Mapa(inventar);
         Jdi jdi = new Jdi(mapa);
-        Zvedni zvedni = new Zvedni (mapa, inventar);
+        Zvedni zvedni = new Zvedni(mapa, inventar);
+        Poloz poloz = new Poloz(mapa, inventar);
 
         Scanner načítej = new Scanner(System.in);
         while (načítej.hasNextLine()) {
@@ -20,18 +22,23 @@ public class Main {
             String příkaz = načítej.nextLine();
             String[] rozdeleni = příkaz.split(" ");
             if (lokace.jdeProvest(rozdeleni[0])) {
-                if (jdi.rozumimPrikazu(rozdeleni)){
+                if (poloz.rozumimPrikazu(rozdeleni)) {
+                    poloz.proved(rozdeleni);
+                }
+                if (jdi.rozumimPrikazu(rozdeleni)) {
                     jdi.proved(rozdeleni);
                 }
-                if (zvedni.rozumimPrikazu(rozdeleni)){
+                if (zvedni.rozumimPrikazu(rozdeleni)) {
                     zvedni.proved(rozdeleni);
-            }
-            else {
-                System.out.println("Toto yde nelye ud2lat.");
+                }
+
+                else {
+                    System.out.println("Toto zde nelze udělat.");
+                }
             }
         }
-    }
 
+    }
 }
 
     /*public static void main(String[] args) throws IOException {
@@ -88,6 +95,3 @@ public class Main {
     //}
     //}
 */
-}
-
-//ukol vytvoř clasu s novým příkazem (třeba seber)
