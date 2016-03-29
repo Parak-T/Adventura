@@ -37,7 +37,8 @@ public class Mapa {
         ArrayList predmety = new ArrayList();
         predmety.add("kámen");
         predmety.add("nůž");
-        predmety.add("cihla");
+        predmety.add("cihlu");
+
 
         povoleneLokace = new HashMap<>();
         povoleneLokace.put(new Pozice(0, 1), new Lokace(jdi));

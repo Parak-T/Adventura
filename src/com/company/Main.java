@@ -31,10 +31,8 @@ public class Main {
                 if (zvedni.rozumimPrikazu(rozdeleni)) {
                     zvedni.proved(rozdeleni);
                 }
-
-                else {
-                    System.out.println("Toto zde nelze udělat.");
-                }
+            } else {
+                System.out.println("Toto zde nelze udělat.");
             }
         }
 

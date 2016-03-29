@@ -17,8 +17,15 @@ public class Inventar {
     }
 
     public void vypis() {
+        if (!predmety.isEmpty()){
+            System.out.println("V batohu máš:");
+        }
         for (Object vec : predmety) {
+
             System.out.println(vec);
+        }
+        if (predmety.isEmpty()) {
+            System.out.println("Batoh je prázdný.");
         }
     }
 
@@ -26,7 +33,7 @@ public class Inventar {
         predmety.remove(vec);
     }
 
-    public boolean over(String vec){
+    public boolean over(String vec) {
         return predmety.contains(vec);
     }
 

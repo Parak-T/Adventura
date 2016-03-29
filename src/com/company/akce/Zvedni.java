@@ -22,11 +22,11 @@ public class Zvedni extends Akce {
     public void proved(String[] parametry) {
         Lokace aktualniLokace = mapa.getAktualniLokace();
         if (aktualniLokace.jdeProvest(getPrikaz()) && aktualniLokace.muzuVzit(parametry[1])) {
-            inventar.pridat (parametry [1]);
-            aktualniLokace.odeberPredmet (parametry [1]);
-            inventar.vypis ();
+            inventar.pridat(parametry[1]);
+            aktualniLokace.odeberPredmet(parametry[1]);
+            inventar.vypis();
         } else {
-            System.out.println("nemůžeš");
+            System.out.println("Kde nic, tu nic.");
         }
     }
 
