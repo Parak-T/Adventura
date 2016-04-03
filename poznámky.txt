@@ -11,6 +11,7 @@ proměnné platí vždy jen v daném bloku!
 shift+F6 = přejmenuje všechny stejné související
 alt+insert v edit. okně = umožňuje měnit metodu
 ctrl+shift+šipka - posune celý řádek
+alt+insert v třle třídy - dá možnost vygenerovat gettery pro konstruktory
 
 
 Třída:
@@ -135,3 +136,10 @@ vytvoříme novou classu, za její jméno napíšeme extends a za to jméno pře
 lekce 8
 generika (koncept generic)- soubor omezení pro Classu
                            -za název Classy napíšu bez mezery <> do nich píšeme omezení
+
+lekce 9
+getter - pomocí getteru můžu vzít a použít objekt
+setter - pomocí setteru se přepisují objekty
+boolenovská operace - operace, pravda/lež
+
+chci-li někde vypsat parametr, musím nadefimovat a) getter, b) toString

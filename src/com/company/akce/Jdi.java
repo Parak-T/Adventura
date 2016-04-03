@@ -1,5 +1,6 @@
 package com.company.akce;
 
+import com.company.Lokace;
 import com.company.Mapa;
 import com.company.Pozice;
 import com.company.akce.Akce;
@@ -22,6 +23,8 @@ public class Jdi extends Akce {
         } else {
             Pozice nova = mapa.jdi(parametry[1]);
             System.out.println("Vešel jsi do místnosti" + nova);
+            mapa.getAktualniLokace().vypis ();
         }
     }
+
 }

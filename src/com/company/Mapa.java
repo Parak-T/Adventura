@@ -16,11 +16,11 @@ public class Mapa {
 
     public Map<Pozice, Lokace> povoleneLokace;
 
-    public Mapa(Inventar inventar) {
+    public Mapa(Hrdina hrdina) {
 
         Jdi prikazJdi = new Jdi(this);
-        Zvedni prikazZvedni = new Zvedni(this, inventar);
-        Poloz prikazPoloz = new Poloz(this, inventar);
+        Zvedni prikazZvedni = new Zvedni(this, hrdina);
+        Poloz prikazPoloz = new Poloz(this, hrdina);
 
         ArrayList jdi = new ArrayList();
         jdi.add(prikazJdi.getPrikaz());
@@ -41,11 +41,11 @@ public class Mapa {
 
 
         povoleneLokace = new HashMap<>();
-        povoleneLokace.put(new Pozice(0, 1), new Lokace(jdi));
-        povoleneLokace.put(new Pozice(1, 1), new Lokace(jdiZvedniPoloz, predmety));
+        povoleneLokace.put(new Pozice(0, 1), new Lokace(jdiZvedniPoloz, predmety));
+        povoleneLokace.put(new Pozice(1, 1), new Lokace(jdiZvedniPoloz, new Bytost("Imp",2,1,1), predmety));
         povoleneLokace.put(new Pozice(2, 1), new Lokace(jdi));
-        povoleneLokace.put(new Pozice(0, 1), new Lokace(jdi));
-        povoleneLokace.put(new Pozice(1, 2), new Lokace(jdiZvedniPoloz, predmety));
+        povoleneLokace.put(new Pozice(1, 0), new Lokace(jdi));
+        povoleneLokace.put(new Pozice(1, 2), new Lokace(jdiZvedniPoloz,new Bytost("Okoun",1,1,1), predmety));
 
         aktualniPozice = (new Pozice(1, 1));
     }

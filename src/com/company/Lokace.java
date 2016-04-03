@@ -14,12 +14,25 @@ public class Lokace {
 
     private List predmety;
 
+    private Bytost bytost;
+
     public Lokace(List akce) {
         this(akce, new ArrayList<>());
     }
 
     public Lokace(List akce, List predmety) {
+        this(akce, null, predmety);
+
+    }
+
+    public Lokace(List akce, Bytost bytost) {
+        this(akce, bytost, null);
+
+    }
+
+    public Lokace(List akce, Bytost bytost, List predmety) {
         this.povoleneAkce = akce;
+        this.bytost = bytost;
         this.predmety = predmety;
     }
 
@@ -38,5 +51,20 @@ public class Lokace {
 
     public void pridejPredmet(String predmet) {
         predmety.add(predmet);
+    }
+
+    public void vypis() {
+        if (!predmety.isEmpty() || bytost != null) {
+            System.out.println("V místnosti vidíš:");
+            for (Object vec : predmety) {
+
+                System.out.println(vec);
+
+            }
+            System.out.println(bytost);
+        } else {
+
+            System.out.println("Bmístnost je prázdná.");
+        }
     }
 }

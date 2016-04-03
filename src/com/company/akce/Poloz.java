@@ -1,5 +1,6 @@
 package com.company.akce;
 
+import com.company.Hrdina;
 import com.company.Inventar;
 import com.company.Lokace;
 import com.company.Mapa;
@@ -9,21 +10,22 @@ import com.company.Mapa;
  */
 public class Poloz extends Akce {
     Mapa mapa;
-    Inventar inventar;
+    Hrdina hrdina;
 
-    public Poloz (Mapa mapa, Inventar inventar) {
+    public Poloz (Mapa mapa, Hrdina hrdina) {
         super("polož", 1);
         this.mapa = mapa;
-        this.inventar = inventar;
+        this.hrdina = hrdina;
     }
 
     public void proved(String[] parametry) {
-        Inventar predmety = inventar;
+        Inventar predmety = hrdina.getInventar();
+
         Lokace aktualniLokace = mapa.getAktualniLokace();
         if (aktualniLokace.jdeProvest(getPrikaz()) && predmety.over(parametry[1])) {
-            inventar.odeber (parametry [1]);
+            predmety.odeber (parametry [1]);
             aktualniLokace.pridejPredmet(parametry [1]);
-            inventar.vypis ();
+            predmety.vypis ();
         }
         else {
             System.out.println("nemůžeš");

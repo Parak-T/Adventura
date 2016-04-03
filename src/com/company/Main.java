@@ -10,11 +10,11 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        Inventar inventar = new Inventar();
-        Mapa mapa = new Mapa(inventar);
+        Hrdina hrdina = new Hrdina();
+        Mapa mapa = new Mapa(hrdina);
         Jdi jdi = new Jdi(mapa);
-        Zvedni zvedni = new Zvedni(mapa, inventar);
-        Poloz poloz = new Poloz(mapa, inventar);
+        Zvedni zvedni = new Zvedni(mapa, hrdina);
+        Poloz poloz = new Poloz(mapa, hrdina);
 
         Scanner načítej = new Scanner(System.in);
         while (načítej.hasNextLine()) {
