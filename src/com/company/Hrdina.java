@@ -32,4 +32,5 @@ public class Hrdina extends Bytost{
         this.zivoty = zivoty;
     }
 
+
 }

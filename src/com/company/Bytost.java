@@ -18,4 +18,24 @@ public class Bytost {
     public String toString() {
         return "monstrum - "+jmeno;
     }
+
+    public String getJmeno() {
+        return jmeno;
+    }
+
+    public Integer getZivoty() {
+        return zivoty;
+    }
+
+    public Integer getUtok() {
+        return utok;
+    }
+
+    public Integer getObrana() {
+        return obrana;
+    }
+
+    public void setZivoty(Integer zivoty) {
+        this.zivoty = zivoty;
+    }
 }

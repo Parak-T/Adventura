@@ -2,6 +2,7 @@ package com.company;
 
 import com.company.akce.Jdi;
 import com.company.akce.Poloz;
+import com.company.akce.Utok;
 import com.company.akce.Zvedni;
 
 import java.io.IOException;
@@ -15,13 +16,22 @@ public class Main {
         Jdi jdi = new Jdi(mapa);
         Zvedni zvedni = new Zvedni(mapa, hrdina);
         Poloz poloz = new Poloz(mapa, hrdina);
+        Utok utok = new Utok (mapa, hrdina);
+
 
         Scanner načítej = new Scanner(System.in);
         while (načítej.hasNextLine()) {
             Lokace lokace = mapa.getAktualniLokace();
             String příkaz = načítej.nextLine();
             String[] rozdeleni = příkaz.split(" ");
-            if (lokace.jdeProvest(rozdeleni[0])) {
+
+            if (příkaz.equals("vypiš batoh")) {
+                hrdina.getInventar().vypis();
+            }
+            else if (příkaz.equals("Co vidím?")) {
+                mapa.getAktualniLokace().vypis();
+            }
+            else if (lokace.jdeProvest(rozdeleni[0])) {
                 if (poloz.rozumimPrikazu(rozdeleni)) {
                     poloz.proved(rozdeleni);
                 }
@@ -31,6 +41,9 @@ public class Main {
                 if (zvedni.rozumimPrikazu(rozdeleni)) {
                     zvedni.proved(rozdeleni);
                 }
+                if (utok.rozumimPrikazu(rozdeleni)) {
+                    utok.proved(rozdeleni);
+                }
             } else {
                 System.out.println("Toto zde nelze udělat.");
             }
@@ -38,6 +51,7 @@ public class Main {
 
     }
 }
+
 
     /*public static void main(String[] args) throws IOException {
        Inventar truhla = new Inventar();

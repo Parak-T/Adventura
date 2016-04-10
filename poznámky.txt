@@ -143,3 +143,7 @@ setter - pomocí setteru se přepisují objekty
 boolenovská operace - operace, pravda/lež
 
 chci-li někde vypsat parametr, musím nadefimovat a) getter, b) toString
+
+lekce 10
+nestíhačka
+dodělat: vypsat zbývající životy hrd i byt, odstranit byt/mrtvoly

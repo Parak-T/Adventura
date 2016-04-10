@@ -37,7 +37,6 @@ public class Lokace {
     }
 
     public boolean jdeProvest(String akce) {
-
         return povoleneAkce.contains(akce);
     }
 
@@ -53,6 +52,10 @@ public class Lokace {
         predmety.add(predmet);
     }
 
+    public boolean jeBytost(String bytost) {
+        return true;
+    }
+
     public void vypis() {
         if (!predmety.isEmpty() || bytost != null) {
             System.out.println("V místnosti vidíš:");
@@ -66,5 +69,9 @@ public class Lokace {
 
             System.out.println("Bmístnost je prázdná.");
         }
+    }
+
+    public Bytost getBytost() {
+        return bytost;
     }
 }
