@@ -47,7 +47,7 @@ public class Mapa {
 
         povoleneLokace = new HashMap<>();
         povoleneLokace.put(new Pozice(0, 1), new Lokace(jdiZvedniPoloz, predmety));
-        povoleneLokace.put(new Pozice(1, 1), new Lokace(jdiZvedniPoloz, new Bytost("Imp", 2, 1, 1), predmety));
+        povoleneLokace.put(new Pozice(1, 1), new Lokace(jdiZvedniPoloz, new Bytost("Imp", 2, 4, 1), predmety));
         povoleneLokace.put(new Pozice(2, 1), new Lokace(jdi));
         povoleneLokace.put(new Pozice(1, 0), new Lokace(jdi));
         povoleneLokace.put(new Pozice(1, 2), new Lokace(jdiZvedniPoloz, new Bytost("Okoun", 1, 1, 1), predmety));

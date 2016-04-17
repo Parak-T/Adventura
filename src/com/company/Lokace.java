@@ -52,8 +52,8 @@ public class Lokace {
         predmety.add(predmet);
     }
 
-    public boolean jeBytost(String bytost) {
-        return true;
+    public boolean jeBytost() {
+        return bytost != null;
     }
 
     public void vypis() {
@@ -64,14 +64,21 @@ public class Lokace {
                 System.out.println(vec);
 
             }
-            System.out.println(bytost);
+            if (jeBytost() == true ){
+                System.out.println(bytost);
+            }
+
         } else {
 
-            System.out.println("Bmístnost je prázdná.");
+            System.out.println("Místnost je prázdná.");
         }
     }
 
     public Bytost getBytost() {
         return bytost;
+    }
+
+    public void odeberBytost() {
+        bytost = null;
     }
 }

@@ -22,7 +22,7 @@ public class Utok extends Akce {
     public void proved(String[] parametry) {
         Lokace aktualniLokace = mapa.getAktualniLokace();
         Bytost bytost = aktualniLokace.getBytost();
-        boj.kolo(hrdina, bytost);
+        boj.kolo(hrdina, bytost, aktualniLokace);
 
         }
 

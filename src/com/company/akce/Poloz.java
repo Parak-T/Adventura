@@ -20,8 +20,8 @@ public class Poloz extends Akce {
 
     public void proved(String[] parametry) {
         Inventar predmety = hrdina.getInventar();
-
         Lokace aktualniLokace = mapa.getAktualniLokace();
+
         if (aktualniLokace.jdeProvest(getPrikaz()) && predmety.over(parametry[1])) {
             predmety.odeber (parametry [1]);
             aktualniLokace.pridejPredmet(parametry [1]);

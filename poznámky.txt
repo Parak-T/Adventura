@@ -110,6 +110,8 @@ obj = instance, objekt, porovnávající objekty?
 Object = třída
 && = operátor "a"
 || = operáto or / nebo
+== = rovná se
+!= = nerovná se
 
 lekce 6
 modifikátory přístupu - access modifier
@@ -147,3 +149,7 @@ chci-li někde vypsat parametr, musím nadefimovat a) getter, b) toString
 lekce 10
 nestíhačka
 dodělat: vypsat zbývající životy hrd i byt, odstranit byt/mrtvoly
+
+Lekce 11
+testy mají vždy pulic void metody
+assertEquals = příkaz porovnává očekávanou hodnotu s vrácenou
