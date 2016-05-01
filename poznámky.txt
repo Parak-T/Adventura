@@ -12,6 +12,9 @@ shift+F6 = přejmenuje všechny stejné související
 alt+insert v edit. okně = umožňuje měnit metodu
 ctrl+shift+šipka - posune celý řádek
 alt+insert v třle třídy - dá možnost vygenerovat gettery pro konstruktory
+ctrl+alt+shift+s - správa aktuálního projektu (moduly, knihovny ...)
+ctrl+alt+s - nastavení idey
+ctrl+shift+a - nalezení akce
 
 
 Třída:
@@ -41,7 +44,7 @@ void - nic nevrací (prázdnota)
 
 11.1.2016 dnešní cvičení:
 
-package com.company;
+package com.com.company;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -118,7 +121,7 @@ modifikátory přístupu - access modifier
 public: veřejný, může je používat kdokoli
 private: používá se na property (proměnná na třídě) jen v dané třídě
 protected: (chráněný) může být použito jen potomkem a v daném balíčku
-nic nenapsáno: jen v daném balíčku (př. com.company)
+nic nenapsáno: jen v daném balíčku (př. com.com.company)
 
 vytvoření potomka:
 vytvoříme novou classu, za její jméno napíšeme extends a za to jméno předka
@@ -153,3 +156,21 @@ dodělat: vypsat zbývající životy hrd i byt, odstranit byt/mrtvoly
 Lekce 11
 testy mají vždy pulic void metody
 assertEquals = příkaz porovnává očekávanou hodnotu s vrácenou
+
+Lekce 12
+systém balíčků v Javě
+root - kořenový adresář
+balíčky - malá a velká písmena
+konvence - většinou pro web, t.zn. pojmenovávám dle domén - př. net.seznam.balicek
+
+mock - třída pro testy, která simuluje jinou třídu
+
+Závisloti
+nástroje pro zprávu závislostí:
+ant - nejstarší už se moc nepoužívá
+maven - nejpoužívanější
+    com.xml
+    po vytvoření projektu je potřeba vytvořit adresář src a v něm adr. main a test... a v nich adr. java
+    pak složky marknu v ctr+alt+shift+s jako sources a test
+    ve všech xml se jmenujou element, nebo-li node (uzel)
+gradle -
